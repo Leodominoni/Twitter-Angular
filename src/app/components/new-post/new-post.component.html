@@ -1,7 +1,69 @@
 <div class="w-[650px] bg-white rounded-lg shadow p-6 mb-8">
-	<div clas="flex justifify-center w-full">
-		<!-- Avatar -->
-		<div class="cursor-pointer font-bold w-12 h-12 bg-gray-300 flex items-center justifify-center rounder-full">
+
+	<div clas="flex justify-center w-full">
+
+		<!-- Avatar  Circle -->
+		<div class="flex-shrink-0 mr-5">
+
+			<div class="cursor-pointer font-bold w-12 h-12 bg-gray-300 flex items-center justify-center rounded-full">
+				<p>Teste</p>
+			</div>
+
+		<!-- Form -->
+
+		<div class="flex-1">
+
+		<!-- Text Area -->
+			<textarea
+			[(ngModel)] = "tweetMessage" (input)="changeTweet()"
+			[maxlength]="tweetMaxLength" class="mb-2
+				bg-gray-200
+				focus: outline-none
+				focus:shadow-outline
+				focus:bg-gray-100
+				border-transparent
+				rounded-lg
+				py-2
+				px-4
+				block
+				w-full
+				appearance-none
+				font-light
+				resize-none
+				placeholder-gray-700"
+				rows="3" placeholder="O que você está pensando...">
+				</textarea>
+
+		<!-- Divide Line -->
+			<div class="w-auto border rounded-lg">
+			</div>
+
+		<!-- Interative -->
+			<div class="flex justify-end item-baseline">
+
+		<!--  Count Chars -->
+			<div class="mr-5 font-thin text-gray-500">
+			<p>{{tweetRemain}}</p>
+
+		<!-- Button -->
+			<div class="mt-5">
+				<button
+				(click)="sendTweet()"
+				type="button"class="w-32
+				focus:outline-none
+				border
+				lorder-transparent
+				py-2
+				px-5
+				rounded-lg
+				bg-blue-500
+				hover:bg-blue-600
+				font-medium
+				text-white
+				shadow
+				text-center">Tweet
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
